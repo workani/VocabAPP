@@ -1,0 +1,14 @@
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.GeneratedMSBuildEditorConfig.editorconfig
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.AssemblyInfoInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.AssemblyInfo.cs
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.csproj.CoreCompileInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/bin/Debug/net8.0/VocabAPP
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/bin/Debug/net8.0/VocabAPP.deps.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/bin/Debug/net8.0/VocabAPP.runtimeconfig.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/bin/Debug/net8.0/VocabAPP.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/bin/Debug/net8.0/VocabAPP.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/refint/VocabAPP.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/VocabAPP.genruntimeconfig.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/VocabAPP/obj/Debug/net8.0/ref/VocabAPP.dll
