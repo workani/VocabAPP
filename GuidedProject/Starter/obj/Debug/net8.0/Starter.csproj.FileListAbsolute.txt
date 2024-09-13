@@ -1,0 +1,14 @@
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.AssemblyInfoInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.AssemblyInfo.cs
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.csproj.CoreCompileInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/bin/Debug/net8.0/Starter
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/bin/Debug/net8.0/Starter.deps.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/bin/Debug/net8.0/Starter.runtimeconfig.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/bin/Debug/net8.0/Starter.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/bin/Debug/net8.0/Starter.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/refint/Starter.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/Starter.genruntimeconfig.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/GuidedProject/Starter/obj/Debug/net8.0/ref/Starter.dll

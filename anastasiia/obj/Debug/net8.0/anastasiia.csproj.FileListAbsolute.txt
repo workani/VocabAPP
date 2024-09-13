@@ -1,0 +1,14 @@
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/bin/Debug/net8.0/anastasiia
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/bin/Debug/net8.0/anastasiia.deps.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/bin/Debug/net8.0/anastasiia.runtimeconfig.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/bin/Debug/net8.0/anastasiia.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/bin/Debug/net8.0/anastasiia.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.GeneratedMSBuildEditorConfig.editorconfig
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.AssemblyInfoInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.AssemblyInfo.cs
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.csproj.CoreCompileInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/refint/anastasiia.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/anastasiia.genruntimeconfig.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/anastasiia/obj/Debug/net8.0/ref/anastasiia.dll

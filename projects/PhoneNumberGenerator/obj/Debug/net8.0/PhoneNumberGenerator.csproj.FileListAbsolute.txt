@@ -1,0 +1,14 @@
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/bin/Debug/net8.0/PhoneNumberGenerator
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/bin/Debug/net8.0/PhoneNumberGenerator.deps.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/bin/Debug/net8.0/PhoneNumberGenerator.runtimeconfig.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/bin/Debug/net8.0/PhoneNumberGenerator.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/bin/Debug/net8.0/PhoneNumberGenerator.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.GeneratedMSBuildEditorConfig.editorconfig
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.AssemblyInfoInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.AssemblyInfo.cs
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.csproj.CoreCompileInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/refint/PhoneNumberGenerator.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/PhoneNumberGenerator.genruntimeconfig.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/PhoneNumberGenerator/obj/Debug/net8.0/ref/PhoneNumberGenerator.dll

@@ -1,0 +1,14 @@
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.AssemblyInfoInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.AssemblyInfo.cs
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.csproj.CoreCompileInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/bin/Debug/net8.0/RidesTracker
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/bin/Debug/net8.0/RidesTracker.deps.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/bin/Debug/net8.0/RidesTracker.runtimeconfig.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/bin/Debug/net8.0/RidesTracker.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/bin/Debug/net8.0/RidesTracker.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/refint/RidesTracker.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/RidesTracker.genruntimeconfig.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/projects/RidesTracker/obj/Debug/net8.0/ref/RidesTracker.dll

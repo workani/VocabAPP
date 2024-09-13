@@ -1,0 +1,14 @@
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.GeneratedMSBuildEditorConfig.editorconfig
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.AssemblyInfoInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.AssemblyInfo.cs
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.csproj.CoreCompileInputs.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/bin/Debug/net8.0/CouresesWorkBook
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/bin/Debug/net8.0/CouresesWorkBook.deps.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/bin/Debug/net8.0/CouresesWorkBook.runtimeconfig.json
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/bin/Debug/net8.0/CouresesWorkBook.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/bin/Debug/net8.0/CouresesWorkBook.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/refint/CouresesWorkBook.dll
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.pdb
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/CouresesWorkBook.genruntimeconfig.cache
+/Users/workand/Library/Mobile Documents/com~apple~CloudDocs/Coding/C#/CouresesWorkBook/obj/Debug/net8.0/ref/CouresesWorkBook.dll
