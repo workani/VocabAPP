@@ -11,4 +11,10 @@
     <Compile Remove="samples\playground.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="GetUserInput">
+      <HintPath>GetUserInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

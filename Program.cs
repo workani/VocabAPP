@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Reflection.Metadata.Ecma335;
 
+// my custom library for getting user input
+using GetUserInput;
+
 namespace VocabAPP
 {
     internal class Program
     {
         public static void Main(string[] args)
         {
-            // while (true)
-            // {
                 VocabApp app = new VocabApp();
                 app.RunApp();
-            // }
         }
     }
 
     class VocabApp
     {
-        // private int LinesCount = 0;
+        private int LinesCount = 0;
         private string FilePath;
+
+        private string UserLanguage;
+        
         
         // store shuffled vocabulary
         private Dictionary<string, string> Vocabulary = new Dictionary<string, string>();       
@@ -26,15 +29,11 @@ namespace VocabAPP
         public void RunApp()
         {
             PrintWelcomeMessage();
-            GetFilePath();
+            GetUserLanguage();
             PopulateDictionary();
-            PrintVocabulary();
+            HandleVocabularyInput();
         }
-
-        // private void GetLinesCount(string filePath)
-        // {
-        //     LinesCount = File.ReadAllLines(filePath).Length;
-        // }
+        
 
         private void PrintWelcomeMessage()
         {
@@ -44,34 +43,29 @@ namespace VocabAPP
             Console.WriteLine("To start, please provide path to csv file with vocabulary.");
             Console.WriteLine("by @workani.");
             Console.WriteLine("+------------------------------------------------------------------+");
+            FilePath = Input.GetFilePath("Path: ");
         }
 
-        private void GetFilePath()
+        private void GetUserLanguage()
         {
-            string path;
+            string language = Input.GetString("Which language do you want to learn: ");
 
-            while (true)
-            {
-                Console.Write("Path: ");
-                path = Console.ReadLine();
-
-                if (File.Exists(path))
-                {
-                    FilePath = path;
-                    Console.Clear();
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("\u001b[31m Provided path to the file is incorrect. Please, try again!\u001b[0m");
-                }
-            }
+            // force first letter of user input to upper case
+            UserLanguage = char.ToUpper(language[0]) +  language.Substring(1);
         }
 
-        // create a dictionary from user's file and populate it with english and german words respectively 
+     
+        
         private void PopulateDictionary()
         {
-            Dictionary<string, string> vocab = File.ReadAllText(FilePath)
+            // save content of user's file 
+            string fileContent = File.ReadAllText(FilePath);
+
+            // get number of lines in user file
+            LinesCount = fileContent.Split("\n", StringSplitOptions.RemoveEmptyEntries).Count();
+            
+            // create a dictionary from user's file and populate it with english and german words respectively 
+            Dictionary<string, string> vocab = fileContent
                 .Split('\n', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
                 .Select(w => w.Split(';'))
                 .ToDictionary(w => w[0], w => w[1]);
@@ -85,12 +79,23 @@ namespace VocabAPP
             Vocabulary = unshuffledVocabulary.OrderBy(x => Random.Shared.Next())
                 .ToDictionary(w => w.Key, w => w.Value);
         }
-
-        private void PrintVocabulary()
+        
+        // ask user for vocabulary and check if input is correct
+        private void HandleVocabularyInput()
         {
+            int currentWord = 1;
+            string userAnswer;
+            
             foreach (var vocab in Vocabulary)
             {
-                Console.WriteLine($"{vocab.Key} | {vocab.Value}");
+                Console.Clear();
+                
+                Console.WriteLine($"(Word {currentWord}/{LinesCount})");
+                Console.WriteLine($"Type {UserLanguage} translation for \"{vocab.Key}\":");
+                
+                userAnswer = Input.GetString("-> ");
+                
+                currentWord++;
             }
         }
         
