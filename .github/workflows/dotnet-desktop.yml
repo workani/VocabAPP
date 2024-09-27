@@ -39,4 +39,4 @@ jobs:
       with:
         name: windows-exe
         path: |
-          ./YourProjectName/bin/Release/net8.0/win-x64/publish/*
+          ./VocabAPP/bin/Release/net8.0/win-x64/publish/*
