@@ -19,7 +19,7 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '8.0..x' # Adjust the .NET version to what your project uses
+        dotnet-version: '8.0.x' # Adjust the .NET version to what your project uses
 
     # Step 3: Restore the project's dependencies
     - name: Restore dependencies
