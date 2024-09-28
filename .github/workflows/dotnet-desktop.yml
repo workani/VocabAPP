@@ -27,7 +27,7 @@ jobs:
 
     # Step 4: Build the project in Release mode
     - name: Build the project
-      run: dotnet build --configuration Release ./VocabAPP/VocabAPP.csproj
+      run: dotnet build --configuration Release VocabAPP.csproj
 
     # Step 5: Publish the project to create a self-contained Windows executable (.exe)
     - name: Publish for Windows (win-x64)
