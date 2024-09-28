@@ -8,7 +8,7 @@ on:
 jobs:
   build-windows:
     name: Build Windows EXE
-    runs-on: windows-latest # This tells GitHub Actions to run the build on a Windows machine.
+    runs-on: windows-latest
 
     steps:
     # Step 1: Checkout the code from your repository
@@ -19,24 +19,28 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '7.x' # Adjust the .NET version to what your project uses
+        dotnet-version: '7.x'
 
     # Step 3: Restore the project's dependencies
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./VocabAPP/VocabAPP.csproj
 
     # Step 4: Build the project in Release mode
     - name: Build the project
-      run: dotnet build --configuration Release
+      run: dotnet build --configuration Release ./VocabAPP/VocabAPP.csproj
 
     # Step 5: Publish the project to create a self-contained Windows executable (.exe)
     - name: Publish for Windows (win-x64)
-      run: dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
+      run: dotnet publish ./VocabAPP/VocabAPP.csproj -c Release -r win-x64 --self-contained -p:PublishSingleFile=true
 
-    # Step 6: Upload the .exe file as an artifact for download
+    # Step 6: List files in the publish directory (for debugging purposes)
+    - name: List files in publish directory
+      run: dir ./VocabAPP/bin/Release/net7.0/win-x64/publish
+
+    # Step 7: Upload the .exe file as an artifact for download
     - name: Upload EXE
       uses: actions/upload-artifact@v3
       with:
         name: windows-exe
         path: |
-          ./VocabAPP/bin/Release/net7.0/win-x64/publish/*
+          ./VocabAPP/bin/Release/**/publish/**/*.exe
