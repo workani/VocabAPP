@@ -43,4 +43,4 @@ jobs:
       with:
         name: windows-exe
         path: |
-          ./VocabAPP/bin/Release/**/publish/**/*.exe
+           D:\a\VocabAPP\VocabAPP\bin\Release\net8.0\win-x64\publish\VocabAPP.exe
