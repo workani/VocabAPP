@@ -23,7 +23,7 @@ jobs:
 
     # Step 3: Restore the project's dependencies
     - name: Restore dependencies
-      run: dotnet restore ./VocabAPP/VocabAPP.csproj
+      run: dotnet restore VocabAPP.csproj
 
     # Step 4: Build the project in Release mode
     - name: Build the project
