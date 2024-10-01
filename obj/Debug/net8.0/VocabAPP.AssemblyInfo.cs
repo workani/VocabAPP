@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VocabAPP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5dc90ff564b2903c6e73b04ffdb4f840fc07385")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32dccae0028ca6389588347c0cbabc43c5335e4d")]
 [assembly: System.Reflection.AssemblyProductAttribute("VocabAPP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VocabAPP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
