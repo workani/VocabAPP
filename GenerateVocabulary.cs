@@ -57,14 +57,16 @@ namespace VocabAPP
     private string GenerateFileName()
     {
         string fileName = "";
+
+        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmssfff");
         // If the user specified the set's topic, add it to the file name.
         if (!string.IsNullOrEmpty(Preference.FileName))
         {
-            fileName = $"{Preference.LanguageLevel}_{Preference.VocabularyTopic}_{Preference.CurrentDate}.csv";
+            fileName = $"{Preference.LanguageLevel}_{Preference.VocabularyTopic}_{Preference.CurrentDate}_{timestamp}.csv";
         }
         else
         {
-            fileName = $"{Preference.LanguageLevel}_{Preference.CurrentDate}.csv";
+            fileName = $"{Preference.LanguageLevel}_{Preference.CurrentDate}_{timestamp}.csv";
         }
 
         
