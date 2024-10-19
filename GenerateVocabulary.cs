@@ -6,7 +6,7 @@ using OpenAI.Chat;
 
 namespace VocabAPP
 {
-    class GenerateVocabulary
+    class GenerateVocabulary : IGenerate
 {
     // OpenAI client 
     private ChatClient Client;

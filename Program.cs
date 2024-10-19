@@ -1,10 +1,5 @@
-﻿using System;
+﻿using DotNetEnv;
 
-using Console = Colorful.Console;
-
-using DotNetEnv;
-
-using GetUserInput;
 
 namespace VocabAPP
 {
@@ -15,10 +10,9 @@ namespace VocabAPP
             // load environment variables from .env file
             Env.Load();
             
-            var app = new Application();
+            var app = new Application(new VocabularyLoader());
             app.RunApp();
-                
-                
+            
         }
 
         public static void Exit(string exitMessage, int exitCode)

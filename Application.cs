@@ -1,22 +1,27 @@
-using System.Drawing;
-using Console = Colorful.Console;
 
-using GetUserInput;
+using System.Drawing;
 
 namespace VocabAPP;
 
 public class Application
 {
-    private AppState appState = new AppState();
-    
+    private readonly ILoad _load;
+
+    private AppState _appState;
+
+    public Application(ILoad load)
+    {
+        _load = load;
+        _appState = new AppState();
+    }
+
     public void RunApp()
     {
         PrintWelcomeMessage();
+        GetLinesCount();
         GetUserLanguage();
-        PopulateDictionary();
-        HandleVocabularyInput();
+        HandleInput();
     }
-
 
     private void PrintWelcomeMessage()
     {
@@ -26,75 +31,41 @@ public class Application
         Console.WriteLine("You can use your own vocabulary file or let the program generate it.");
         Console.WriteLine("by @workani.");
         Console.WriteLine("+------------------------------------------------------------------+");
-        LoadVocabulary();
+        _appState.Vocabulary = _load.Load();
     }
 
-    private void LoadVocabulary()
+
+    private void GetLinesCount()
     {
-        if (Input.GetAgreement("Load your own csv file(y/n)?: "))
-        {
-            appState.FilePath = Input.GetString("Filepath: ");
-        }
-        else
-        {
-            var generateVocabulary = new GenerateVocabulary();
-            appState.FilePath = generateVocabulary.Generate();
-        }
+        _appState.LinesCount = _appState.Vocabulary.Count();
     }
-
+    
     private void GetUserLanguage()
     {
         Console.Clear();
         string language = Input.GetString("Which language do you want to learn: ");
 
         // force first letter of user input to upper case
-        appState.UserLanguage = char.ToUpper(language[0]) + language.Substring(1);
+        _appState.UserLanguage = char.ToUpper(language[0]) + language.Substring(1);
     }
-
     
-    private void PopulateDictionary()
-    {
-        // save content of user's file 
-        string fileContent = File.ReadAllText(appState.FilePath);
-
-        // get number of lines in user file
-        appState.LinesCount = fileContent.Split("\n", StringSplitOptions.RemoveEmptyEntries).Count();
-
-        // create a dictionary from user's file and populate it with english and german words respectively 
-        Dictionary<string, string> vocab = fileContent
-            .Split('\n', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
-            .Select(w => w.Split(';'))
-            .DistinctBy(w => w[0]) // skip all duplicates
-            .ToDictionary(w => w[0], w => w[1]);
-
-        ShuffleVocabulary(vocab);
-    }
-
-    // shuffle user's vocabulary 
-    private void ShuffleVocabulary(Dictionary<string, string> unshuffledVocabulary)
-    {
-        appState.Vocabulary = unshuffledVocabulary.OrderBy(x => Random.Shared.Next())
-            .ToDictionary(w => w.Key, w => w.Value);
-    }
-
-
     private string GetUserAnswer(string wordToTranslate, int wordCount)
     {
         Console.Clear();
-        Console.WriteLine($"(Word {wordCount}/{appState.LinesCount})", Color.DarkMagenta);
-        Console.WriteLine($"Type {appState.UserLanguage} translation for \"{wordToTranslate}\":");
+        Console.WriteLine($"(Word {wordCount}/{_appState.LinesCount})", Color.DarkMagenta);
+        Console.WriteLine($"Type {_appState.UserLanguage} translation for \"{wordToTranslate}\":");
 
         // get user input and force it to lower case
         return Input.GetString("-> ").ToLower();
     }
 
     // ask user for vocabulary and check if input is correct
-    private void HandleVocabularyInput()
+    private void HandleInput()
     {
         int currentWord = 1;
         string userAnswer;
 
-        foreach (var vocab in appState.Vocabulary)
+        foreach (var vocab in _appState.Vocabulary)
         {
             userAnswer = GetUserAnswer(vocab.Key, currentWord);
 
@@ -109,15 +80,15 @@ public class Application
             Console.Clear();
         }
 
-        PrintResults(appState.CorrectAnswers.Count(), appState.IncorrectAnswers.Count(), appState.LinesCount);
+        PrintResults(_appState.CorrectAnswers.Count(), _appState.IncorrectAnswers.Count(), _appState.LinesCount);
     }
 
     // print out message and store user's correct answer
     private void HandleCorrectAnswer(string userAnswer, string sourceWord)
     {
         Console.Clear();
-        Console.WriteLine("Correct!", Color.Red);
-        appState.CorrectAnswers.TryAdd(userAnswer, sourceWord);
+        Console.WriteLine("Correct!", Color.Green);
+        _appState.CorrectAnswers.TryAdd(userAnswer, sourceWord);
         Thread.Sleep(1000);
     }
 
@@ -125,11 +96,11 @@ public class Application
     private void HandleIncorrectAnswer(string userAnswer, string targetWord)
     {
         Console.Clear();
-        Console.WriteLine("mIncorrect :(", Color.Red);
-        appState.IncorrectAnswers.TryAdd(userAnswer, targetWord);
+        Console.WriteLine("Incorrect :(", Color.Red);
+        _appState.IncorrectAnswers.TryAdd(userAnswer, targetWord);
         Thread.Sleep(1000);
     }
-
+    
     private void PrintResults(int correctAnswers, int incorrectAnswers, int totalWords)
     {
         Console.Clear();
@@ -139,20 +110,20 @@ public class Application
         Console.WriteLine($"Incorrect answers: {incorrectAnswers}", Color.Red);
         Console.WriteLine("+-----------------------------------------------------------------------------+");
     }
-}
+    
+    
+    // store all important info
+    public class AppState
+    {
+        public int LinesCount { get; set; } = 0;
+        public string FilePath { get; set; }
+        public string UserLanguage { get; set; }
 
+        // Store shuffled vocabulary
+        public Dictionary<string, string> Vocabulary { get; set; }
 
-// store all important info
-public class AppState
-{
-    public int LinesCount { get; set; } = 0;
-    public string FilePath { get; set; }
-    public string UserLanguage { get; set; }
-
-    // Store shuffled vocabulary
-    public Dictionary<string, string> Vocabulary { get; set; } = new Dictionary<string, string>();
-
-    // Store correct and incorrect answers
-    public Dictionary<string, string> CorrectAnswers { get; set; } = new Dictionary<string, string>();
-    public Dictionary<string, string> IncorrectAnswers { get; set; } = new Dictionary<string, string>();
+        // Store correct and incorrect answers
+        public Dictionary<string, string> CorrectAnswers { get; set; } = new Dictionary<string, string>();
+        public Dictionary<string, string> IncorrectAnswers { get; set; } = new Dictionary<string, string>();
+    }
 }
