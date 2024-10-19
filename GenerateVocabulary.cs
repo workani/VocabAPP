@@ -6,7 +6,7 @@ using OpenAI.Chat;
 
 namespace VocabAPP
 {
-    class GenerateVocabulary : IGenerate
+    class GenerateVocabulary
 {
     // OpenAI client 
     private ChatClient Client;
@@ -39,18 +39,8 @@ namespace VocabAPP
 
     private void GetUserPreference()
     {
-        string sourceLangugae = Input.GetString("Your native language: ");
-        string targetLanguage = Input.GetString("Language that you want to learn: ");
-
-        // uppercase first letter 
-        Preference.SourceLanguage = char.ToUpper(sourceLangugae[0]) + sourceLangugae.Substring(1); 
-        Preference.TargetLanguage = char.ToUpper(targetLanguage[0]) + targetLanguage.Substring(1); 
-
-        Console.Clear();
-
         Preference.LanguageLevel = GetLanguageLevel();
-
-
+        
         Console.Clear();
 
         // Check if user wants to specify the set's topic and file name
@@ -59,7 +49,7 @@ namespace VocabAPP
             Preference.VocabularyTopic = Input.GetString("Topic: ");
         }
         
-            Preference.FileName = GenerateFileName();
+        Preference.FileName = GenerateFileName();
             
         Console.Clear();
     }
@@ -86,20 +76,23 @@ namespace VocabAPP
     private void GenerateVocabularySet()
     {
         string prompt = "";
-        
-        
+
+
         if (!string.IsNullOrEmpty(Preference.VocabularyTopic))
         {
-            prompt = $"You need to generate a set with 20 lines of vocabulary in the following format {Preference.SourceLanguage};{Preference.TargetLanguage}." +
-                     $" Complexity of vocabulary should be at the {Preference.LanguageLevel} language level. The set's topic is {Preference.VocabularyTopic}." +
-                     $" DO NOT INCLUDE WHITESPACES OR ANYTHING ELSE OR CHANGE THE FORMAT. IT SHOULD BE PLAIN VOCABULARY WITHOUT ANY MARKDOWN." +
-                     $"ALWAYS SEPARATE WORDS WITH ;";
+            prompt =
+                $"You need to generate a set with 20 lines of vocabulary in the following format {Preference.SourceLanguage};{Preference.TargetLanguage}." +
+                $" Complexity of vocabulary should be at the {Preference.LanguageLevel} language level. The set's topic is {Preference.VocabularyTopic}." +
+                $"In case the language is one where articles are mandatory (e.g., German, French, Spanish, Italian), always include the appropriate articles for all nouns and ensure there is a whitespace after each article." +
+                $" DO NOT INCLUDE WHITESPACES OR ANYTHING ELSE OR CHANGE THE FORMAT. IT SHOULD BE PLAIN VOCABULARY WITHOUT ANY MARKDOWN." +
+                $"ALWAYS SEPARATE WORDS WITH ;";
             
         }
         else
         {
             prompt = $"You need to generate a set with 20 lines of vocabulary in the following format {Preference.SourceLanguage};{Preference.TargetLanguage}." +
                      $" Complexity of vocabulary should be at the {Preference.LanguageLevel} language level." +
+                     $"In case the language is one where articles are mandatory (e.g., German, French, Spanish, Italian), always include the appropriate articles for all nouns and ensure there is a whitespace after each article." +
                      $" DO NOT INCLUDE WHITESPACES OR ANYTHING ELSE OR CHANGE THE FORMAT. IT SHOULD BE PLAIN VOCABULARY WITHOUT ANY MARKDOWN." +
                      $"ALWAYS SEPARATE WORDS WITH ;";
             
@@ -138,12 +131,15 @@ namespace VocabAPP
     }
     
     // Initialise OpenAI client and use environment library as API key 
-    public GenerateVocabulary()
+    public GenerateVocabulary(string sourceLanguage, string targetLanguage)
     {
         // Load api key from .env file
         Env.Load();
         
         Client = new ChatClient(model: "gpt-4o-mini", Environment.GetEnvironmentVariable("OPENAI_KEY"));
+
+        Preference.SourceLanguage = sourceLanguage;
+        Preference.TargetLanguage = targetLanguage;
     }
 
     public string Generate()

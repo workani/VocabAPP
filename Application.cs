@@ -18,8 +18,8 @@ public class Application
     public void RunApp()
     {
         PrintWelcomeMessage();
+        LoadVocabulary();
         GetLinesCount();
-        GetUserLanguage();
         HandleInput();
     }
 
@@ -31,7 +31,31 @@ public class Application
         Console.WriteLine("You can use your own vocabulary file or let the program generate it.");
         Console.WriteLine("by @workani.");
         Console.WriteLine("+------------------------------------------------------------------+");
-        _appState.Vocabulary = _load.Load();
+
+    }
+
+    private void LoadVocabulary()
+    {
+        if (Input.GetAgreement("Load your own csv vocabulary file?(y/n): "))
+        {
+            var path = Input.GetString("Path: ");
+            _appState.Vocabulary = _load.Load(path);    
+        }
+        else
+        {
+            var sourceLanguage =  Input.GetString("Your native language: ");
+            var targetLanguage =  Input.GetString("Language that you want to learn: ");
+
+            // Force first letter to uppercase 
+            _appState.TargetLanguage = char.ToUpper(targetLanguage[0]) + targetLanguage.Substring(1);
+            
+            _appState.Vocabulary = _load.Load(sourceLanguage, targetLanguage);    
+        }
+    }
+
+    private void PrintDictionary()
+    {
+        throw new NotImplementedException();
     }
 
 
@@ -40,20 +64,12 @@ public class Application
         _appState.LinesCount = _appState.Vocabulary.Count();
     }
     
-    private void GetUserLanguage()
-    {
-        Console.Clear();
-        string language = Input.GetString("Which language do you want to learn: ");
-
-        // force first letter of user input to upper case
-        _appState.UserLanguage = char.ToUpper(language[0]) + language.Substring(1);
-    }
     
     private string GetUserAnswer(string wordToTranslate, int wordCount)
     {
         Console.Clear();
         Console.WriteLine($"(Word {wordCount}/{_appState.LinesCount})", Color.DarkMagenta);
-        Console.WriteLine($"Type {_appState.UserLanguage} translation for \"{wordToTranslate}\":");
+        Console.WriteLine($"Type {_appState.TargetLanguage} translation for \"{wordToTranslate}\":");
 
         // get user input and force it to lower case
         return Input.GetString("-> ").ToLower();
@@ -117,7 +133,7 @@ public class Application
     {
         public int LinesCount { get; set; } = 0;
         public string FilePath { get; set; }
-        public string UserLanguage { get; set; }
+        public string TargetLanguage { get; set; }
 
         // Store shuffled vocabulary
         public Dictionary<string, string> Vocabulary { get; set; }

@@ -11,11 +11,16 @@ public class VocabularyLoader : ILoad
         return ShuffleVocabulary(PopulateDictionary());
     }
     
-    public Dictionary<string, string> Load()
+    public Dictionary<string, string> Load(string sourceLanguage, string targetLanguage)
     {
-        var vocabularyGenerator = GenerateVocabularyFactory.Create();
+        var vocabularyGenerator = new GenerateVocabulary(sourceLanguage, targetLanguage);
+        
+        // generate vocabulary file and save path to it
+        
         FilePath = vocabularyGenerator.Generate();
+        
         PopulateDictionary();
+        
         return ShuffleVocabulary(PopulateDictionary());
     }
 
