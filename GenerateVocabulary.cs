@@ -1,7 +1,4 @@
-using System;
 using DotNetEnv;
-using GetUserInput;
-using OpenAI;
 using OpenAI.Chat;
 
 namespace VocabAPP
@@ -58,7 +55,7 @@ namespace VocabAPP
     {
         string fileName = "";
 
-        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmssfff");
+        string timestamp = DateTime.Now.ToString("yyyy.MMdd.HH.mmssfff");
         // If the user specified the set's topic, add it to the file name.
         if (!string.IsNullOrEmpty(Preference.FileName))
         {
