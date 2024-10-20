@@ -1,5 +1,7 @@
+.idea/
 bin/
 obj/
 Vocabulary/
 .env
 .DS_Store
+*.DotSettings.user

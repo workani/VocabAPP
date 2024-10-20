@@ -85,7 +85,7 @@ public class Application
         }
 
         Console.WriteLine("\nPress any key to jump into practice...");
-        Console.ReadLine();
+        Console.ReadKey();
     }
 
 
@@ -97,7 +97,7 @@ public class Application
     
     
     private string GetUserAnswer(string wordToTranslate, int wordCount)
-    {
+    {   
         Console.Clear();
         Console.WriteLine($"(Word {wordCount}/{_appState.LinesCount})", Color.DarkMagenta);
         Console.WriteLine($"Type {_appState.TargetLanguage} translation for \"{wordToTranslate}\":");
@@ -144,8 +144,9 @@ public class Application
     {
         Console.Clear();
         Console.WriteLine("Incorrect :(", Color.Red);
+        Console.WriteLine($"Correct answers was {targetWord}");
         _appState.IncorrectAnswers.TryAdd(userAnswer, targetWord);
-        Thread.Sleep(1000);
+        Thread.Sleep(1500);
     }
     
     private void PrintResults(int correctAnswers, int incorrectAnswers, int totalWords)
